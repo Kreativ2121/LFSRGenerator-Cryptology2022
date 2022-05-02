@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="400.0" maxWidth="1000.0" minHeight="400.0" minWidth="1000.0" prefHeight="400.0" prefWidth="1000.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bcastle.lfsrtests.LFSRController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane maxHeight="400.0" maxWidth="1000.0" minHeight="400.0" minWidth="1000.0" prefHeight="400.0" prefWidth="1000.0">
+      <children>
+         <Text layoutX="256.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LFSR - Generators &amp; Tests - Dominik Ciesiołkiewicz 44289">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Text>
+         <Button layoutX="609.0" layoutY="71.0" mnemonicParsing="false" onAction="#onButtonGenerate1" text="Generate" />
+         <Button layoutX="609.0" layoutY="109.0" mnemonicParsing="false" onAction="#onButtonGenerate2" text="Generate" />
+         <Button layoutX="609.0" layoutY="147.0" mnemonicParsing="false" onAction="#onButtonGenerate3" text="Generate" />
+         <Text layoutX="46.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LFSR1">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="46.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LFSR2">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="46.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LFSR3">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="212.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="f(x1)" />
+         <Text layoutX="212.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="f(x2)" />
+         <Text layoutX="212.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="f(x3)" />
+         <Text layoutX="75.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Function/register length:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+         <Text layoutX="247.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Constant term, function:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+         <Text layoutX="461.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register values:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+         <TextField fx:id="const1" layoutX="247.0" layoutY="72.0" prefHeight="26.0" prefWidth="23.0" />
+         <TextField fx:id="const2" layoutX="247.0" layoutY="109.0" prefHeight="26.0" prefWidth="23.0" />
+         <TextField fx:id="length3" layoutX="121.0" layoutY="146.0" prefHeight="26.0" prefWidth="47.0" />
+         <TextField fx:id="length2" layoutX="121.0" layoutY="108.0" prefHeight="26.0" prefWidth="47.0" />
+         <TextField fx:id="length1" layoutX="121.0" layoutY="71.0" prefHeight="26.0" prefWidth="47.0" />
+         <TextField fx:id="const3" layoutX="247.0" layoutY="147.0" prefHeight="26.0" prefWidth="23.0" />
+         <TextField fx:id="function3" layoutX="275.0" layoutY="147.0" prefHeight="26.0" prefWidth="114.0" />
+         <TextField fx:id="function2" layoutX="275.0" layoutY="109.0" prefHeight="26.0" prefWidth="114.0" />
+         <TextField fx:id="function1" layoutX="275.0" layoutY="72.0" prefHeight="26.0" prefWidth="114.0" />
+         <TextField fx:id="register3" layoutX="428.0" layoutY="148.0" prefHeight="26.0" prefWidth="154.0" />
+         <TextField fx:id="register2" layoutX="428.0" layoutY="109.0" prefHeight="26.0" prefWidth="154.0" />
+         <TextField fx:id="register1" layoutX="428.0" layoutY="71.0" prefHeight="26.0" prefWidth="154.0" />
+         <TextArea fx:id="output1" layoutX="701.0" layoutY="65.0" prefHeight="39.0" prefWidth="290.0" />
+         <TextArea fx:id="output2" layoutX="701.0" layoutY="102.0" prefHeight="39.0" prefWidth="290.0" />
+         <TextArea fx:id="output3" layoutX="702.0" layoutY="140.0" prefHeight="39.0" prefWidth="289.0" />
+         <Text layoutX="825.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+         <Button layoutX="11.0" layoutY="8.0" mnemonicParsing="false" onAction="#onButtonSetPlain" text="Set Plain Data" />
+         <Line endX="892.0" endY="-1.52587890625E-5" layoutX="108.0" layoutY="188.0" startX="-108.00001525878906" startY="-1.52587890625E-5" />
+         <Line endX="892.0" endY="-1.52587890625E-5" layoutX="107.0" layoutY="45.0" startX="-108.00001525878906" startY="-1.52587890625E-5" />
+         <Text layoutX="36.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Geffe generator:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="56.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stop-and-go:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="17.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shrinking generator:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <TextArea fx:id="geffe" layoutX="139.0" layoutY="226.0" prefHeight="39.0" prefWidth="406.0" />
+         <TextArea fx:id="stopAndGo" layoutX="139.0" layoutY="277.0" prefHeight="39.0" prefWidth="406.0" />
+         <TextArea fx:id="shrinking" layoutX="139.0" layoutY="329.0" prefHeight="39.0" prefWidth="406.0" />
+         <Button layoutX="293.0" layoutY="193.0" mnemonicParsing="false" onAction="#onButtonRunGenerators" text="Run Generators" />
+         <Line endX="-57.70001220703125" endY="-78.5" layoutX="618.0" layoutY="267.0" startX="-57.70001220703125" startY="133.00003051757812" />
+         <Text layoutX="9.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generators">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Text>
+         <Text layoutX="9.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LFSR">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Text>
+         <Text layoutX="569.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tests">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Text>
+         <Button layoutX="743.0" layoutY="205.0" mnemonicParsing="false" onAction="#onButtonRunTests" prefWidth="96.8" text="Run Tests" />
+         <Text layoutX="595.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Geffe generator:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="613.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stop-and-go:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="572.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shrinking generator:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="712.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poker Test:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="801.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Long Runs Test:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Text layoutX="923.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Runs Test:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <Line endX="98.0" layoutX="902.0" layoutY="265.0" opacity="0.9" startX="-341.20001220703125" />
+         <Line endX="97.0" layoutX="903.0" layoutY="312.0" opacity="0.9" startX="-342.20001220703125" />
+         <Line endX="95.0" layoutX="905.0" layoutY="356.0" opacity="0.9" startX="-344.20001220703125" />
+         <Line endX="-32.29998779296875" endY="-74.70004272460938" layoutX="730.0" layoutY="315.0" opacity="0.9" startX="-32.29998779296875" startY="84.99996948242188" />
+         <Line endX="-32.29998779296875" endY="-74.70004272460938" layoutX="823.0" layoutY="314.0" opacity="0.9" startX="-32.29998779296875" startY="86.0" />
+         <Line endX="-32.2999267578125" endY="-74.70004272460938" layoutX="936.0" layoutY="314.0" opacity="0.9" startX="-32.29998779296875" startY="86.0" />
+         <Line endX="99.0" layoutX="901.0" layoutY="239.0" opacity="0.9" startX="-340.20001220703125" />
+         <Line endX="-32.5" endY="-76.5" layoutX="1033.0" layoutY="316.0" opacity="0.9" startX="-32.5" startY="83.29290771484375" />
+         <Line endX="95.0" layoutX="905.0" layoutY="400.0" opacity="0.9" startX="-344.20001220703125" />
+         <Label fx:id="labelPoker1" layoutX="723.0" layoutY="279.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="labelPoker2" layoutX="724.0" layoutY="324.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="labelPoker3" layoutX="723.0" layoutY="369.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="labelLongRuns1" layoutX="826.0" layoutY="279.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="labelLongRuns2" layoutX="825.0" layoutY="324.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="labelLongRuns3" layoutX="825.0" layoutY="369.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="labelRuns1" layoutX="934.0" layoutY="279.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="labelRuns2" layoutX="934.0" layoutY="324.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="labelRuns3" layoutX="934.0" layoutY="369.0" text="-" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="12.0" />
+            </font>
+         </Label>
+         <Button layoutX="108.0" layoutY="8.0" mnemonicParsing="false" onAction="#onButtonSetComplex" text="Set Complex Data" />
+      </children>
+   </AnchorPane>
+</VBox>
