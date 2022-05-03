@@ -12,6 +12,7 @@ public class LFSRApplication extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LFSRApplication.class.getResource("lfsr.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        stage.setResizable(false);
         //IDE version
         stage.getIcons().add(new Image("/icon.png"));
         //Jar version
